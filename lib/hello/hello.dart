@@ -15,7 +15,13 @@ class HelloApp extends StatelessWidget {
         child: Text('Welcome Flutter'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _onFabPressed,
+        onPressed: () {
+          // final snackbar = SnackBar(
+          //   content: Text('Welcome SnackBar'),
+          // );
+          // Scaffold.of(context).showSnackBar(snackbar);
+          _onFabPressed(context);
+        },
         child: Icon(Icons.add),
       ),
       bottomNavigationBar: _buildBottomNavigation()
@@ -34,7 +40,11 @@ class HelloApp extends StatelessWidget {
     );
   }
 
-  void _onFabPressed() {
+  void _onFabPressed(BuildContext context) {
     print('onFab pressed');
+    // final snackBar = SnackBar(
+    //   content: Text('Hello snackbar'),
+    // );
+    // Scaffold.of(context).showSnackBar(snackBar);
   }
 }
