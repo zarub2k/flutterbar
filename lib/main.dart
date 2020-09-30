@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbar/hello/hello.dart';
+import 'package:flutterbar/core/stateful.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: MyHomePage(title: 'Flutter Bar'),
-      home: HelloApp(),
+      home: Counter(),
     );
   }
 }
