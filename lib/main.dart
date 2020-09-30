@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbar/core/stateful.dart';
+import 'package:flutterbar/layouts/layouts.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: MyHomePage(title: 'Flutter Bar'),
-      home: Counter(),
+      home: LayoutsApp(),
     );
   }
 }
