@@ -18,6 +18,19 @@ class HelloApp extends StatelessWidget {
         onPressed: _onFabPressed,
         child: Icon(Icons.add),
       ),
+      bottomNavigationBar: _buildBottomNavigation()
+    );
+  }
+
+  Widget _buildBottomNavigation() {
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.account_balance), Icon(Icons.access_alarm)
+        ],
+      ),
     );
   }
 
