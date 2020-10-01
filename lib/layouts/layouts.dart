@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbar/layouts/row.dart';
 
 class LayoutsApp extends StatelessWidget {
   @override
@@ -11,6 +12,7 @@ class LayoutsApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Layouts hustle'),
       ),
+      body: RowLayout(),
     );
   }
 }
