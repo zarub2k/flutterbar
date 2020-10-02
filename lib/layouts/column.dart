@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ColumnLayout extends StatelessWidget {
@@ -8,12 +9,19 @@ class ColumnLayout extends StatelessWidget {
 
   Widget _build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text('Apple'),
         Text('Banana'),
-        Text('Guava')
+        Text('Guava'),
+        Expanded(
+          child: FittedBox(
+            fit: BoxFit.cover,
+            child: Icon(Icons.account_box),
+          ),
+        ),
+        Icon(Icons.access_alarm)
       ],
     );
   }
