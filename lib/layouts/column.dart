@@ -12,15 +12,19 @@ class ColumnLayout extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       // crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text('Apple'),
-        Text('Banana'),
-        Text('Guava'),
         Expanded(
-          child: FittedBox(
-            fit: BoxFit.cover,
-            child: Icon(Icons.account_box),
+          child: Center(
+            child: Text('Apple'),
           ),
         ),
+        Text('Banana'),
+        Text('Guava'),
+        // Expanded(
+        //   child: FittedBox(
+        //     fit: BoxFit.cover,
+        //     child: Icon(Icons.account_box),
+        //   ),
+        // ),
         Icon(Icons.access_alarm)
       ],
     );
