@@ -19,13 +19,16 @@ class ColumnLayout extends StatelessWidget {
         ),
         Text('Banana'),
         Text('Guava'),
-        // Expanded(
-        //   child: FittedBox(
-        //     fit: BoxFit.cover,
-        //     child: Icon(Icons.account_box),
-        //   ),
-        // ),
-        Icon(Icons.access_alarm)
+        Container(
+          padding: EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: Colors.deepOrange
+            )
+          ),
+          child: Icon(Icons.access_alarm)
+        )
       ],
     );
   }
