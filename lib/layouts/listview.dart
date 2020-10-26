@@ -12,17 +12,29 @@ class ListViewLayout extends StatelessWidget {
 
   ListView _buildWithDefault(BuildContext context) {
     return ListView(
-      children: children(5),
+      children: _buildListTiles(10),
     );
   }
 
-  List<Container> children(int length) {
+  List<ListTile> _buildListTiles(int length) {
+    return List.generate(length, (index) =>
+      ListTile(
+        title: Text('Title $index'),
+        subtitle: Text('Subtitle $index'),
+      )
+    );
+  }
+
+  List<Container> _buildChildren(int length) {
     return List.generate(length, (index) =>
         Container(
+          padding: EdgeInsets.all(10.0),
           decoration: BoxDecoration(
             border: Border.all(color: Colors.green)
           ),
-          child: Text('LV$index'),
+          child: Center(
+            child: Text('LV$index'),
+          ),
         ));
   }
 }
