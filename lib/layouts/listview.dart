@@ -7,13 +7,26 @@ class ListViewLayout extends StatelessWidget {
   }
 
   ListView _build(BuildContext context) {
-    return _buildWithBuilder(context);
+    return _buildWithSeparated(context);
   }
 
-  ListView _buildWithDefault(BuildContext context) {
-    return ListView(
-      children: _buildListTiles(10),
-    );
+  ListView _buildWithSeparated(BuildContext context) {
+    final List<String> entries = <String>['A', 'B', 'C'];
+    final List<int> colors = <int>[600, 500, 100];
+
+    return ListView.separated(
+      itemBuilder: (BuildContext context, int index) {
+        return Container(
+          height: 50,
+          color: Colors.green[colors[index]],
+          child: Center(
+            child: Text('Entry ${entries[index]}'),
+          ),
+        );
+      },
+      separatorBuilder: (BuildContext context, int index) => Divider(),
+      itemCount: entries.length)
+    ;
   }
 
   ListView _buildWithBuilder(BuildContext context) {
@@ -21,16 +34,22 @@ class ListViewLayout extends StatelessWidget {
     final List<int> colors = <int>[600, 500, 100];
 
     return ListView.builder(
-      itemCount: entries.length,
-      itemBuilder: (BuildContext context, int index) {
-        return Container(
-          height: 50,
-          color: Colors.amber[colors[index]],
-          child: Center(
-            child: Text('Entry ${entries[index]}'),
-          ),
-        );
-      }
+        itemCount: entries.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            height: 50,
+            color: Colors.amber[colors[index]],
+            child: Center(
+              child: Text('Entry ${entries[index]}'),
+            ),
+          );
+        }
+    );
+  }
+
+  ListView _buildWithDefault(BuildContext context) {
+    return ListView(
+      children: _buildListTiles(10),
     );
   }
 
