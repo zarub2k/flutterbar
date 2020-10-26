@@ -6,11 +6,19 @@ class GridViewLayout extends StatelessWidget {
     return _buildWithExtent(context);
   }
 
+  //Grid with dynamic builder
+  GridView _buildWithBuilder(BuildContext context) {
+    return GridView.builder(
+      gridDelegate: null,
+      itemBuilder: null
+    );
+  }
+
   //Grid with size of children based on axis extent value
   GridView _buildWithExtent(BuildContext context) {
     return GridView.extent(
       maxCrossAxisExtent: 100.0,
-      children: _buildGridTiles(20),
+      children: _buildGridTiles(16),
     );
   }
 

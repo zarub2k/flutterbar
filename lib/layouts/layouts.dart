@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:flutterbar/layouts/row.dart';
-// import 'package:flutterbar/layouts/column.dart';
-// import 'package:flutterbar/ext/expanded.dart';
 import 'package:flutterbar/custom/fancy_button.dart';
-import 'gridview.dart';
+import 'listview.dart';
 
 class LayoutsApp extends StatelessWidget {
   @override
@@ -16,7 +13,7 @@ class LayoutsApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Layouts hustle'),
       ),
-      body: GridViewLayout(),
+      body: ListViewLayout(),
       floatingActionButton: FancyButton(
         onPressed: _onFabPressed,
       ),
