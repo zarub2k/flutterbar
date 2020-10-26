@@ -19,6 +19,9 @@ class ListViewLayout extends StatelessWidget {
   List<Container> children(int length) {
     return List.generate(length, (index) =>
         Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.green)
+          ),
           child: Text('LV$index'),
         ));
   }
