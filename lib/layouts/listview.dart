@@ -25,8 +25,8 @@ class ListViewLayout extends StatelessWidget {
         );
       },
       separatorBuilder: (BuildContext context, int index) => Divider(),
-      itemCount: entries.length)
-    ;
+      itemCount: entries.length
+    );
   }
 
   ListView _buildWithBuilder(BuildContext context) {
