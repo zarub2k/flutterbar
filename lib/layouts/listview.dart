@@ -19,8 +19,16 @@ class ListViewLayout extends StatelessWidget {
   List<ListTile> _buildListTiles(int length) {
     return List.generate(length, (index) =>
       ListTile(
-        title: Text('Title $index'),
+        title: Text(
+          'Title $index',
+          style: TextStyle(
+            color: Colors.amber,
+            fontWeight: FontWeight.w500,
+            fontSize: 20.0
+          ),
+        ),
         subtitle: Text('Subtitle $index'),
+        leading: Icon(Icons.accessibility),
       )
     );
   }
