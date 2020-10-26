@@ -17,9 +17,9 @@ class ListViewLayout extends StatelessWidget {
   }
 
   List<Container> children(int length) {
-    return List.generate(length,
-            (index) => Container(
-              child: Text('LV$index'),
-            ));
+    return List.generate(length, (index) =>
+        Container(
+          child: Text('LV$index'),
+        ));
   }
 }
