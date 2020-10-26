@@ -3,12 +3,23 @@ import 'package:flutter/material.dart';
 class GridViewLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return _build(context);
+    return _buildWithExtent(context);
   }
 
-  GridView _build(BuildContext context) {
+  //Grid with size of children based on axis extent value
+  GridView _buildWithExtent(BuildContext context) {
+    return GridView.extent(
+      maxCrossAxisExtent: 100.0,
+      children: _buildGridTiles(20),
+    );
+  }
+
+  //Grid with fixed column count
+  GridView _buildWithCount(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
+      crossAxisSpacing: 5.0,
+      mainAxisSpacing: 5.0,
       children: _buildGridTiles(20),
     );
   }
