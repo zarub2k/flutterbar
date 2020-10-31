@@ -6,9 +6,19 @@ class StackLayout extends StatelessWidget {
     return _build(context);
   }
 
-  Stack _build(BuildContext context) {
-    return Stack(
-
+  SizedBox _build(BuildContext context) {
+    return SizedBox(
+      width: 250,
+      height: 250,
+      child: Stack(
+        children: [
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.white,
+          )
+        ],
+      ),
     );
   }
 }
