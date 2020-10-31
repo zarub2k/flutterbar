@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StackLayout extends StatelessWidget {
@@ -12,10 +13,20 @@ class StackLayout extends StatelessWidget {
       height: 250,
       child: Stack(
         children: [
+          Center(
+            child: Container(
+              alignment: AlignmentDirectional.bottomEnd,
+              width: 200,
+              height: 200,
+              color: Colors.green,
+              child: Text('Bottom container'),
+            ),
+          ),
           Container(
-            width: 200,
-            height: 200,
-            color: Colors.white,
+            width: 150,
+            height: 150,
+            color: Colors.orange,
+            child: Text('Top container'),
           )
         ],
       ),
