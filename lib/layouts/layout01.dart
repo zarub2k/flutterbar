@@ -14,6 +14,10 @@ class Layout01 extends StatelessWidget {
     );
   }
 
+  // Widget _buildTitle() {
+  //   return null;
+  // }
+
   Image _buildHeader() {
     return Image.asset(
       'images/lake.jpg',
