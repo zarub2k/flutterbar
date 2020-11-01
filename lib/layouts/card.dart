@@ -15,18 +15,25 @@ class CardLayout extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            title: Text('ESAF bank'),
             leading: Icon(Icons.food_bank),
+            trailing: Icon(Icons.arrow_right),
+            title: Text('ESAF bank'),
+            subtitle: Text('Small finance bank'),
+
           ),
           Divider(),
           ListTile(
-            title: Text('Chennai beach'),
             leading: Icon(Icons.beach_access),
+            trailing: Icon(Icons.arrow_right),
+            title: Text('Chennai beach'),
+            subtitle: Text('Largest beach'),
           ),
           Divider(),
           ListTile(
+            leading: Icon(Icons.beach_access_sharp),
+            trailing: Icon(Icons.arrow_right),
             title: Text('Kottivakkm beach'),
-            leading: Icon(Icons.beach_access_sharp)
+            subtitle: Text('Beautiful beach in Chennai'),
           ),
           Divider()
         ],
