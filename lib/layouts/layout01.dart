@@ -6,7 +6,20 @@ class Layout01 extends StatelessWidget {
     return _build(context);
   }
   
-  Widget _build(BuildContext context) {
-    return null; 
+  Column _build(BuildContext context) {
+    return Column(
+      children: [
+        _buildHeader()
+      ],
+    );
+  }
+
+  Image _buildHeader() {
+    return Image.asset(
+      'images/lake.jpg',
+      width: 600,
+      height: 240,
+      fit: BoxFit.cover,
+    );
   }
 }
