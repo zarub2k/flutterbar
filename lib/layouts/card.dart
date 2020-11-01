@@ -20,6 +20,10 @@ class CardLayout extends StatelessWidget {
           Divider(),
           ListTile(
             title: Text('Chennai beach'),
+          ),
+          Divider(),
+          ListTile(
+            title: Text('Kottivakkm beach'),
           )
         ],
       ),
