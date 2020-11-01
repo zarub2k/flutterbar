@@ -16,14 +16,17 @@ class CardLayout extends StatelessWidget {
         children: [
           ListTile(
             title: Text('ESAF bank'),
+            leading: Icon(Icons.food_bank),
           ),
           Divider(),
           ListTile(
             title: Text('Chennai beach'),
+            leading: Icon(Icons.beach_access),
           ),
           Divider(),
           ListTile(
             title: Text('Kottivakkm beach'),
+            leading: Icon(Icons.beach_access_sharp)
           ),
           Divider()
         ],
