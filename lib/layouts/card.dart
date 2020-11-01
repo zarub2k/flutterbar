@@ -24,7 +24,8 @@ class CardLayout extends StatelessWidget {
           Divider(),
           ListTile(
             title: Text('Kottivakkm beach'),
-          )
+          ),
+          Divider()
         ],
       ),
     );
