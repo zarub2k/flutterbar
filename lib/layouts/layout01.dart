@@ -43,8 +43,17 @@ class Layout01 extends StatelessWidget {
             ],
           )
         ),
-        Icon(Icons.star),
-        Text('50')
+        Container(
+          padding: const EdgeInsets.all(8),
+          child: Icon(
+            Icons.star,
+            color: Colors.red[500],
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(8),
+          child: Text('50'),
+        )
       ],
     );
   }
