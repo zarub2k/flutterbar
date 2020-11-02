@@ -10,8 +10,48 @@ class Layout01 extends StatelessWidget {
     return Column(
       children: [
         _buildHeader(),
-        _buildTitle()
+        _buildTitle(),
+        _buildActions()
       ],
+    );
+  }
+  
+  Row _buildActions() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        _column(Icons.call, 'Calls'),
+        _column(Icons.router, 'Router'),
+        _column(Icons.share, 'Share')
+      ],
+    );
+  }
+
+  Column _column(IconData icon, String value) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          color: Colors.blue,
+        ),
+        _container(value)
+      ],
+    );
+  }
+
+  Container _container(String value) {
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      child: Text(
+        value,
+        style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            color: Colors.blue
+        ),
+      ),
     );
   }
 
