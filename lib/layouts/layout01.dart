@@ -9,14 +9,45 @@ class Layout01 extends StatelessWidget {
   Column _build(BuildContext context) {
     return Column(
       children: [
-        _buildHeader()
+        _buildHeader(),
+        _buildTitle()
       ],
     );
   }
 
-  // Widget _buildTitle() {
-  //   return null;
-  // }
+  Row _buildTitle() {
+    return Row(
+      children: [
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                child: Text(
+                  'Great lake water',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(8),
+                child: Text(
+                  'Chennai, Tamilnadu',
+                  style: TextStyle(
+                    color: Colors.grey[500]
+                  ),
+                ),
+              )
+            ],
+          )
+        ),
+        Icon(Icons.star),
+        Text('50')
+      ],
+    );
+  }
 
   Image _buildHeader() {
     return Image.asset(
