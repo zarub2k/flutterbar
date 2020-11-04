@@ -11,30 +11,31 @@ class Layout01 extends StatelessWidget {
       children: [
         _buildHeader(),
         _buildTitle(),
-        _buildActions()
+        _buildActions(context)
       ],
     );
   }
   
-  Row _buildActions() {
+  Row _buildActions(BuildContext context) {
+    Color color = Theme.of(context).primaryColor;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _column(Icons.call, 'Calls'),
-        _column(Icons.router, 'Router'),
-        _column(Icons.share, 'Share')
+        _column(color, Icons.call, 'Calls'),
+        _column(color, Icons.router, 'Router'),
+        _column(color, Icons.share, 'Share')
       ],
     );
   }
 
-  Column _column(IconData icon, String value) {
+  Column _column(Color color, IconData icon, String value) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
           icon,
-          color: Colors.blue,
+          color: color,
         ),
         _container(value)
       ],
