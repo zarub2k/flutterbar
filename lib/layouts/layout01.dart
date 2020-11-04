@@ -22,7 +22,7 @@ class Layout01 extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         _column(color, Icons.call, 'Calls'),
-        _column(color, Icons.router, 'Router'),
+        _column(color, Icons.near_me, 'Route'),
         _column(color, Icons.share, 'Share')
       ],
     );
