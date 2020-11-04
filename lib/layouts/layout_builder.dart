@@ -7,10 +7,10 @@ class CustomLayoutBuilder extends StatelessWidget {
   }
 
   Widget _build(BuildContext context) {
-    return null;
+    return _buildLayoutBuilder(context);
   }
 
-  LayoutBuilder _buildLayoutBuilder(BuildContext context) {
+  Widget _buildLayoutBuilder(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 600) {
