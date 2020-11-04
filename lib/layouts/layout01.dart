@@ -6,8 +6,8 @@ class Layout01 extends StatelessWidget {
     return _build(context);
   }
   
-  Column _build(BuildContext context) {
-    return Column(
+  ListView _build(BuildContext context) {
+    return ListView(
       children: [
         _buildHeader(),
         _buildTitle(),
