@@ -11,8 +11,22 @@ class Layout01 extends StatelessWidget {
       children: [
         _buildHeader(),
         _buildTitle(),
-        _buildActions(context)
+        _buildActions(context),
+        _buildText()
       ],
+    );
+  }
+  
+  Container _buildText() {
+    return Container(
+      margin: EdgeInsets.only(top: 15.0),
+      padding: EdgeInsets.all(15.0),
+      child: Text(
+        'This is a very long text to explain the context of the application.'
+        'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese'
+        'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese',
+        softWrap: true,
+      ),
     );
   }
   
