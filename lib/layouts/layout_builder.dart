@@ -24,13 +24,30 @@ class CustomLayoutBuilder extends StatelessWidget {
 
   Widget _buildWideContainer() {
     return Center(
-
+      child: Row(
+        children: [
+          Container(
+            color: Colors.red,
+            width: 100,
+            height: 100,
+          ),
+          Container(
+            color: Colors.yellow,
+            width: 100,
+            height: 100,
+          )
+        ],
+      ),
     );
   }
 
   Widget _buildNarrowContainer() {
     return Center(
-
+      child: Container(
+        color: Colors.red,
+        width: 100,
+        height: 100,
+      ),
     );
   }
 }
