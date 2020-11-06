@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbar/custom/fancy_button.dart';
-import 'layout01.dart';
+import 'media_query.dart';
 
 class LayoutsApp extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class LayoutsApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Layouts hustle'),
       ),
-      body: Layout01(),
+      body: LayoutWithMediaQuery(),
       floatingActionButton: FancyButton(
         onPressed: _onFabPressed,
       ),
