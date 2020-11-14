@@ -7,6 +7,27 @@ class Constraints extends StatelessWidget {
   }
   
   Widget _build(BuildContext context) {
-    return null;
+    return _buildCenter();
+  }
+
+  Center _buildCenter() {
+    return Center(
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.yellow,
+      ),
+    );
+  }
+
+  Align _buildAlign() {
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.red,
+      ),
+    );
   }
 }
