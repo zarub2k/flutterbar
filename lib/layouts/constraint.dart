@@ -7,7 +7,19 @@ class Constraints extends StatelessWidget {
   }
   
   Widget _build(BuildContext context) {
-    return _buildCenter();
+    return _buildOverflowBox();
+  }
+
+  OverflowBox _buildOverflowBox() {
+    return OverflowBox(
+      maxWidth: 200,
+      maxHeight: 200,
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.red,
+      ),
+    );
   }
 
   Center _buildCenter() {
