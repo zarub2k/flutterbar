@@ -7,7 +7,16 @@ class Constraints extends StatelessWidget {
   }
   
   Widget _build(BuildContext context) {
-    return _buildRowWithExpanded();
+    return _buildRowWithFlexible();
+  }
+
+  Row _buildRowWithFlexible() {
+    return Row(
+      children: [
+        Flexible(child: Text('This is my first text which needs to render first')),
+        Flexible(child: Text('This is the second text which needs to follow the first'))
+      ],
+    );
   }
 
   Row _buildRowWithExpanded() {
