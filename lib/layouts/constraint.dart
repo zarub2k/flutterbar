@@ -7,7 +7,24 @@ class Constraints extends StatelessWidget {
   }
   
   Widget _build(BuildContext context) {
-    return _buildOverflowBox();
+    return _buildRowWithExpanded();
+  }
+
+  Row _buildRowWithExpanded() {
+    return Row(
+      children: [
+        Container(
+          child: Expanded(
+            child: Text('This is a very long text and it should be rendered properly'),
+          )
+        ),
+        Container(
+          child: Expanded(
+              child: Text('This is the second element which needs to be rendered properly as well.'),
+          ),
+        )
+      ],
+    );
   }
 
   OverflowBox _buildOverflowBox() {
